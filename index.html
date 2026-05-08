@@ -1,56 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEV.JR - Portfólio Pessoal</title>
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danilo - Portfólio Pessoal</title>
 
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <header id="header-principal">
-        <nav class="container">
-            <div class="logo-status">
-                <img src="assets/img/character/avatar-head.png" alt="Avatar DEV.JR" class="avatar-icon">
-                <div class="status-bar">
-                    <span class="dev-name">DEV.JR</span>
-                    <div class="xp-container">
-                        <div class="xp-fill"></div>
-                    </div>
-                    <div class="xp-text">
-                        <span>LV. 10</span>
-                        <span>050 / 1200 XP</span>
-                    </div>
-                </div>
+      <nav class="container">
+        <div class="logo-status">
+          <img
+            src="assets/imgs/character/avatar-head.png"
+            alt="Avatar DEV.JR"
+            class="avatar-icon"
+          />
+          <div class="status-bar">
+            <span class="dev-name">Danilo Fernandes</span>
+            <div class="xp-container">
+              <div class="xp-fill"></div>
             </div>
+            <div class="xp-text">
+              <span>LV. 10</span>
+              <span>050 / 1200 XP</span>
+            </div>
+          </div>
+        </div>
 
-            <ul class="menu">
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <ul class="menu">
+          <li><a href="#sobre-mim">Sobre mim</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="sobre-mim" class="secao"></section>
-        
-        <section id="formacao" class="secao"></section>
-        
-        <section id="portfolio" class="secao"></section>
-        
-        <section id="contato" class="secao"></section>
+      <section id="sobre-mim" class="secao">
+        <div class="hero">
+          <div class="hero-conteudo">
+            <p class="saudacao">OLÁ, EU SOU</p>
+            <h1 class="nome-destaque">Danilo Fernandes</h1>
+            <h2 class="cargo">DESENVOLVEDOR WEB</h2>
+            <p class="resumo">
+              Transformo ideias em experiências interativas na web. Apaixonado
+              por tecnologia, esportes e bons desafios.
+            </p>
+            <div class="botoes-hero">
+              <a href="#portfolio" class="btn btn-primario">VER PROJETOS ></a>
+              <a href="#contato" class="btn btn-secundario">ENTRE EM CONTATO</a>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="painel-janela">
+          <h3 class="titulo-sessao">/ SOBRE MIM</h3>
+
+          <div class="sobre-grid">
+            <div class="sobre-avatar">
+              <img
+                src="assets/imgs/character/avatar-moldura.png"
+                alt="Rosto do personagem DEV.JR"
+              />
+            </div>
+
+            <div class="sobre-texto">
+              <p>
+                Sou desenvolvedor web full stack com foco no ecossistema .NET e React JS,
+                criando aplicações modernas e com ótimas experiências para o
+                usuário.
+              </p>
+
+              <p>
+                No meu tempo livre, dedico-me a praticar inglês para situações
+                do dia a dia e sou fã de uma boa leitura, equilibrando clássicos
+                da literatura com séries de fantasia. Atualmente, estou sempre
+                explorando novas tecnologias para construir soluções cada vez
+                melhores.
+              </p>
+            </div>
+
+            <div class="sobre-status">
+              <div class="status-item">
+                <img
+                  src="assets/imgs/icons/heart.png"
+                  alt="Ícone Coração"
+                  class="icone-status"
+                />
+                <div class="status-info">
+                  <span class="status-label">FOCO</span>
+                  <span class="status-valor">100%</span>
+                </div>
+              </div>
+              <div class="status-item">
+                <img
+                  src="assets/imgs/icons/sword.png"
+                  alt="Ícone Espada"
+                  class="icone-status"
+                />
+                <div class="status-info">
+                  <span class="status-label">EXPERIÊNCIA</span>
+                  <span class="status-valor">ESTÁGIO + PROJETOS</span>
+                </div>
+              </div>
+              <div class="status-item">
+                <img
+                  src="assets/imgs/icons/star.png"
+                  alt="Ícone Estrela"
+                  class="icone-status"
+                />
+                <div class="status-info">
+                  <span class="status-label">MISSÃO</span>
+                  <span class="status-valor">CRIAR SOLUÇÕES INCRÍVEIS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="formacao" class="secao"></section>
+
+      <section id="portfolio" class="secao"></section>
+
+      <section id="contato" class="secao"></section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>Obrigado por visitar! Vamos conversar?</p>
-            <p>&copy; 2026 Danilo Fernandes - DEV.JR</p>
-        </div>
+      <div class="container">
+        <p>Obrigado por visitar! Vamos conversar?</p>
+        <p>&copy; 2026 Danilo Fernandes - DEV.JR</p>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

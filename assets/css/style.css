@@ -20,13 +20,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: var(--fonte-pixel);
   font-size: 20px;
   line-height: 1.5;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -43,7 +46,6 @@ ul {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 
 /* CABEÇALHO E NAVEGAÇÃO */
 
@@ -123,11 +125,9 @@ ul {
   color: var(--cor-destaque);
 }
 
-
 /* SEÇÕES GERAIS */
 
 .secao {
-  padding-top: 108px;
   padding-bottom: 60px;
   max-width: 1100px;
   margin: 0 auto;
@@ -139,18 +139,18 @@ ul {
   margin-bottom: 20px;
 }
 
-
 /* SEÇÃO: SOBRE MIM */
 /* Área Hero */
 .hero {
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 108px;
   margin-bottom: 16px;
   min-height: 480px;
   border-radius: 8px;
   overflow: hidden;
-  background-image: url('../imgs/character/avatar-bg-hero.png');
+  background-image: url("../imgs/character/avatar-bg-hero.png");
   background-size: cover;
   background-position: 60% center;
   background-repeat: no-repeat;
@@ -221,8 +221,6 @@ ul {
   background-color: var(--cor-painel);
 }
 
-
-
 /* Painel Janela */
 .painel-janela {
   background-color: var(--cor-painel);
@@ -284,6 +282,292 @@ ul {
   color: #fff;
 }
 
+/* SEÇÃO: FORMAÇÃO */
+.formacao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.formacao-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  padding: 20px;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+.formacao-card:hover {
+  border-color: var(--cor-destaque);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--cor-borda);
+  padding-bottom: 10px;
+}
+
+.icone-formacao {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+.formacao-titulo {
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formacao-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.formacao-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--cor-borda);
+}
+
+.formacao-item:last-child {
+  border-bottom: none;
+}
+
+.item-nome {
+  font-size: 1.1rem;
+  color: var(--cor-destaque);
+}
+
+.item-detalhe {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Destaque para itens em progresso e concluído*/
+.concluido .item-detalhe {
+  color: var(--cor-verde-xp);
+  font-style: italic;
+}
+
+.em-progresso .item-detalhe {
+  color: var(--cor-texto);
+  font-style: italic;
+}
+
+/* SEÇÃO: PORTFÓLIO */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.projeto-card {
+  background-color: var(--cor-painel);
+  border: 2px solid var(--cor-borda);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.projeto-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--cor-destaque);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.projeto-img {
+  width: 100%;
+  /* height: 180px; */
+  object-fit: contain;
+  image-rendering: pixelated;
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.projeto-conteudo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projeto-titulo {
+  font-size: 1.5rem;
+  color: var(--cor-destaque);
+  margin-bottom: 12px;
+}
+
+.projeto-desc {
+  font-size: 1.1rem;
+  color: var(--cor-texto);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.projeto-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed var(--cor-borda);
+  padding-top: 16px;
+}
+
+.projeto-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--cor-borda);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.projeto-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.projeto-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.icone-seta {
+  width: 32px;
+  image-rendering: pixelated;
+}
+
+/* ==========================================================================
+   SEÇÃO: CONTATO
+   ========================================================================== */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contato-lista li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.icone-contato {
+  width: 48px;
+  image-rendering: pixelated;
+}
+
+.mailbox-img {
+  width: 120px;
+  image-rendering: pixelated;
+  margin-top: 30px;
+  align-self: flex-start;
+}
+
+.contato-form-container {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+
+.form-chamada {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: var(--cor-destaque);
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-grupo label {
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+  outline: none;
+  border-color: var(--cor-destaque);
+}
+
+.erro-msg {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  min-height: 1.2rem;
+}
+
+.btn-enviar {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.mensagem-sucesso {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(74, 222, 128, 0.1);
+  border: 1px solid var(--cor-verde-xp);
+  color: var(--cor-verde-xp);
+  text-align: center;
+  border-radius: 4px;
+  display: none;
+}
 
 /* RESPONSIVIDADE */
 
@@ -338,6 +622,15 @@ ul {
 
   .secao {
     padding-top: 120px;
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mailbox-img {
+    align-self: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -410,6 +703,10 @@ ul {
 
   .status-item {
     justify-content: center;
+  }
+
+  .formacao-grid {
+    grid-template-columns: 1fr;
   }
 }
 
